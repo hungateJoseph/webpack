@@ -364,7 +364,7 @@ declare interface AllCodeGenerationSchemas {
 	exportsBindingSource: string;
 
 	/**
-	 * final name of each used export of a concatenated module whose definitions were left out on demand
+	 * local expression for each used export, for native library bindings
 	 */
 	exportsFinalName: Record<string, string>;
 
@@ -32313,6 +32313,7 @@ declare namespace exports {
 		export let uncaughtErrorHandler: "__webpack_require__.oe";
 		export let wasmInstances: "__webpack_require__.w";
 		export let worker: "__webpack_require__.wc";
+		export let exportBinding: "__webpack_require__.eb";
 	}
 	export const UsageState: Readonly<{
 		Unused: 0;
@@ -32681,6 +32682,7 @@ declare namespace exports {
 			export let uncaughtErrorHandler: "__webpack_require__.oe";
 			export let wasmInstances: "__webpack_require__.w";
 			export let worker: "__webpack_require__.wc";
+			export let exportBinding: "__webpack_require__.eb";
 		}
 		export {
 			RuntimeModule,
